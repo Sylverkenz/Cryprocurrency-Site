@@ -1,0 +1,21 @@
+// @import "/sass/variable";
+*,
+*::after,
+*::before {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  
+  @include respond(phone) {
+    font-size: 50%;
+  }
+}
+
+body {
+  color: $color-white;
+  background-color: $color-primary;
+}

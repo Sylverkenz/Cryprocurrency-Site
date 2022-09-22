@@ -1,0 +1,232 @@
+.about {
+  &__numbers {
+    align-items: center;
+    justify-content: space-between;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__numbers-details {
+    align-items: center;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    width: 6.5rem;
+    height: 6.5rem;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
+    display: grid;
+    place-items: center;
+    margin-right: 2.4rem;
+
+    @include respond(tab-port) {
+      margin-right: 3rem;
+      width: 11rem;
+      height: 9rem;
+    }
+
+    @include respond(phone) {
+      margin-right: 2rem;
+      width: 8rem;
+      height: 6.5rem;
+    }
+
+    i {
+      font-size: 2.5rem;
+      color: $color-tertiary;
+
+      @include respond(tab-port) {
+        font-size: 4rem;
+      }
+
+      @include respond(phone) {
+        font-size: 3rem;
+      }
+    }
+  }
+
+  &__text-numbers {
+    display: block;
+    padding-bottom: 0.5rem;
+
+    @include respond(phone) {
+      padding-bottom: 0.2rem;
+    }
+  }
+
+  &__content {
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+
+    @include respond(tab-port) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 6.4rem;
+    }
+
+    @include respond(phone) {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 6.4rem;
+    }
+  }
+
+  &__content-text {
+    width: 49%;
+    padding-left: 10%;
+    padding-block: 2rem;
+    
+
+    @include respond(tab-port) {
+      width: unset;
+      padding-left: 0;
+      margin-top: 2rem;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+
+
+  &__content-imgbox {
+    width: 49%;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__content-img {
+    width: 100%;
+  }
+
+  &__info {
+    text-align: center;
+    margin-bottom: 6.4rem;
+
+    // @include respond(tab-port) {
+    //   margin-bottom: 4rem;
+    // }
+
+    @include respond(phone) {
+      margin-bottom: 4rem;
+    }
+  }
+
+  p {
+    width: 50%;
+    margin-inline: auto;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+
+    @include respond(phone) {
+      width: 100%;
+    }
+  }
+
+  &__rate-box {
+    background-color: $color-white;
+    max-width: 90rem;
+    margin-inline: auto;
+    padding: 4rem;
+    border-radius: 2rem;
+    box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.1);
+    margin-bottom: -25rem;
+
+    @include respond(phone) {
+      padding: 3rem;
+    }
+
+    .ratebox1 {
+      display: flex;
+      justify-content: space-between;
+      gap: 4.8rem;
+
+      @include respond(tab-port) {
+        font-size: 2.5rem;
+      }
+
+      @include respond(phone) {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      input {
+        border: none;
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        padding: 1rem;
+        border-bottom: 1px solid $color-grey-5;
+        width: 100%;
+
+        @include respond(tab-port) {
+          font-size: 2.5rem;
+        }
+
+        @include respond(phone) {
+          font-size: 2.2rem;
+        }
+
+        &::placeholder {
+          color: $color-primary;
+        }
+      }
+
+      select {
+        border: none;
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        padding: 1rem;
+        border-bottom: 1px solid $color-grey-5;
+        width: 50%;
+      }
+    }
+
+    .ratebox2 {
+      margin-top: 4.8rem;
+
+      .title-sm-m {
+        color: $color-tertiary;
+      }
+
+      .heading-tertiary {
+        color: $color-primary;
+        span {
+          color: $color-tertiary;
+        }
+      }
+      .body-sm-r {
+        color: $color-grey-3;
+      }
+    }
+  }
+}

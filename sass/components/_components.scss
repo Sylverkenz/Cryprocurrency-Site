@@ -1,0 +1,406 @@
+.navigation {
+  @include respond(phone1) {
+    position: absolute;
+    top: 5rem;
+    right: 10rem;
+    &__checkbox {
+      display: none;
+    }
+
+    &__list {
+      list-style: none;
+    }
+
+    &__items {
+      display: inline-block;
+      margin-right: 0.8rem;
+      position: relative;
+
+      &:nth-of-type(5) {
+        &::after {
+          display: block;
+          content: "";
+          width: 1px;
+          height: 100%;
+          background-color: $color-grey-3;
+          position: absolute;
+          top: 0;
+          right: 0;
+        }
+        margin-right: 4.8rem;
+      }
+
+      &:not(:last-child) {
+        a {
+          padding: 1rem 2.4rem;
+        }
+      }
+    }
+
+    &__links {
+      &:link,
+      &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        font-size: 1.6rem;
+        color: $color-white;
+        text-transform: capitalize;
+        background-image: linear-gradient(
+          125deg,
+          transparent 0.5%,
+          white 0.5%,
+          white 100%
+        );
+        background-size: 29000%;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          color: $color-primary;
+          background-size: 100%;
+          border-radius: 3px;
+        }
+      }
+    }
+  }
+
+  @include respond(tab-port) {
+    &__checkbox {
+      display: none;
+    }
+
+    &__button {
+      height: 6rem;
+      width: 6rem;
+      background-color: $color-white;
+      border-radius: 50%;
+      position: fixed;
+      top: 3rem;
+      right: 3rem;
+      z-index: 20;
+      display: grid;
+      place-items: center;
+
+      span {
+        &,
+        &::after,
+        &::before {
+          display: block;
+          content: "";
+          width: 3rem;
+          height: 3px;
+          border-radius: 2px;
+          background-color: $color-primary;
+          transition: all 0.4s;
+        }
+
+        &::after {
+          transform: translateY(-10px);
+        }
+        &::before {
+          transform: translateY(7px);
+        }
+      }
+
+      &:hover {
+        span::after {
+          transform: translateY(-12px);
+        }
+
+        span::before {
+          transform: translateY(9px);
+        }
+      }
+    }
+
+    &__background {
+      height: 6rem;
+      width: 6rem;
+      background-image: linear-gradient(
+        to bottom left,
+        $color-secondary,
+        $color-primary
+      );
+      border-radius: 50%;
+      position: fixed;
+      top: 3rem;
+      right: 3rem;
+      z-index: 10;
+      // transform: scale(80);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &__nav {
+      height: 100vh;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 11;
+
+      opacity: 0;
+      visibility: hidden;
+      transform: translateX(20rem);
+      transition: all 0.5s ease-in-out;
+    }
+
+    &__list {
+      list-style: none;
+      display: grid;
+      place-items: center;
+    }
+
+    &__items {
+      display: block;
+      margin-bottom: 1rem;
+    }
+
+    &__links {
+      &:link,
+      &:visited {
+        display: inline-block;
+        text-decoration: none;
+        font-family: "Rubik", sans-serif;
+        font-weight: 400;
+        font-size: 2rem;
+        color: $color-white;
+        text-transform: uppercase;
+        padding: 1.5rem 5rem;
+        background-image: linear-gradient(
+          125deg,
+          transparent 0.5%,
+          white 0.5%,
+          white 100%
+        );
+        background-size: 25000%;
+        transition: all 0.4s ease-in-out;
+
+        &:hover {
+          color: $color-secondary;
+          background-size: 100%;
+        }
+      }
+    }
+
+    &__checkbox:checked ~ &__background {
+      transform: scale(80);
+    }
+
+    &__checkbox:checked ~ &__nav {
+      opacity: 1;
+      visibility: visible;
+      transform: translateX(0);
+    }
+
+    &__checkbox:checked ~ &__button {
+      span {
+        & {
+          background-color: transparent;
+        }
+
+        &::after {
+          transform: rotate(45deg) translateY(-1.5px);
+        }
+
+        &::before {
+          transform: rotate(-45deg) translateY(1.5px);
+        }
+      }
+    }
+  }
+}
+
+.cards {
+  width: 35rem;
+  height: 55rem;
+  text-align: center;
+  perspective: 150rem;
+  position: relative;
+
+  &__title {
+    width: 60%;
+    text-align: center;
+    margin-inline: auto;
+    color: $color-primary;
+    margin-bottom: 6.4rem;
+
+    @include respond(tab-port) {
+      width: 100%;
+    }
+  }
+
+  &__icon {
+    margin-bottom: 4.8rem;
+  }
+
+  &__side {
+    position: absolute;
+    width: 35rem;
+    height: 55rem;
+    overflow: hidden;
+    backface-visibility: hidden;
+    transition: all 0.6s;
+
+    @include respond(tab-port) {
+      position: relative;
+    }
+
+    &--front {
+      width: 35rem;
+      background-color: $color-white;
+      margin-inline: auto;
+      box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.1);
+      padding: 4.8rem 2.4rem;
+      border-radius: 1.6rem;
+      transition: all 0.4s;
+
+     
+
+      h3 {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-primary;
+        margin-bottom: 1.6rem;
+
+        span {
+          color: $color-grey-3;
+          opacity: 0.7;
+          margin-left: 0.8rem;
+        }
+      }
+
+      p {
+        color: $color-grey-3;
+        margin-bottom: 2.4rem;
+      }
+
+      a {
+        display: inline-block;
+        font-family: "Rubik", sans-serif;
+        font-weight: 500;
+        font-size: 1.6rem;
+        color: $color-tertiary;
+        padding: 1.5rem 2rem;
+        border: 2px solid rgba(43, 7, 110, 0.2);
+        border-radius: 50%;
+        span {
+          display: none;
+        }
+      }
+    }
+
+    &--back {
+      display: grid;
+      place-items: center;
+      transform: rotateY(180deg);
+      width: 35rem;
+      height: 55rem;
+      box-shadow: 0 2rem 4rem 0 rgba(0, 0, 0, 0.2);
+      border-radius: 1.6rem;
+      background-color: $color-secondary;
+
+      @include respond(tab-port) {
+        height: fit-content;
+        transform: rotateY(0);
+        margin-top: -6rem;
+        padding-block: 3rem;
+        clip-path: polygon(0 25%, 100% 0, 100% 100%, 0 100%);
+      }
+
+      a {
+        display: block;
+        position: relative;
+
+        &::after {
+          display: block;
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: -1;
+          border-radius: 10rem;
+          transition: all 0.6s ease-in-out;
+        }
+
+        &:hover {
+          &::after {
+            transform: scaleX(1.4) scaleY(1.6);
+            opacity: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &:hover &__side--front {
+    transform: rotateY(-180deg);
+
+     @include respond(tab-port){
+        transform: rotateY(0);
+      }
+  }
+
+  &:hover &__side--back {
+    transform: rotateY(0deg);
+  }
+
+  &__btc &__side--back {
+    a {
+      padding: 2rem 3.6rem;
+      background: linear-gradient(to right, #f9aa4b, #f7931a);
+
+      &::after {
+        background: linear-gradient(to right, #f9aa4b, #f7931a);
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__eth &__side--back {
+    a {
+      padding: 2rem 3.6rem;
+      background-color: #1181e8;
+
+      &::after {
+        background-color: #1181e8;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+    }
+  }
+
+  &__ltc &__side--back {
+    a {
+      padding: 2rem 3.6rem;
+      background-color: #59c19c;
+
+      &::after {
+        background-color: #59c19c;
+      }
+
+      &:hover {
+        &::after {
+          transform: scaleX(1.4) scaleY(1.6);
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

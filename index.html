@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="img/title.png" sizes="32x32" type="image/png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500&family=Lato:wght@100;300;400;700;900&family=Rubik:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/sass/index.css" />
+    <title>CRAPPO Cryptocurrency | Landing Page</title>
+    <script
+      src="https://kit.fontawesome.com/cdb61a6f94.js"
+      crossorigin="anonymous"
+      defer
+    ></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="navigation">
+      <input
+        type="checkbox"
+        name="checkbox"
+        id="checkbox"
+        class="navigation__checkbox"
+      />
+      <label for="checkbox" class="navigation__button"><span></span></label>
+      <div class="navigation__background"></div>
+      <nav class="navigation__nav">
+        <ul class="navigation__list">
+          <li class="navigation__items">
+            <a class="navigation__links" href="#">products</a>
+          </li>
+          <li class="navigation__items">
+            <a class="navigation__links" href="#">features</a>
+          </li>
+          <li class="navigation__items">
+            <a class="navigation__links" href="#">about</a>
+          </li>
+          <li class="navigation__items">
+            <a class="navigation__links" href="#">contact</a>
+          </li>
+          <li class="navigation__items">
+            <a class="navigation__links" href="#">login</a>
+          </li>
+          <li class="navigation__items">
+            <a class="navigation__links btn" href="#">register</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+    <header class="header">
+      <div class="header__logobox">
+        <img src="img/Logo.svg" alt="logo" class="header__logo" />
+      </div>
+      <div class="header__hero">
+        <div class="header__hero-textbox">
+          <p class="header__hero-advert margin-bottom-m body-sm-r">
+            <span class="title-sm-m">75% save</span> for the black friday
+            weekend
+          </p>
+          <h1 class="header__hero-title heading-primary margin-bottom-m">
+            Fastest & secure platform to invest in crypto.
+          </h1>
+          <p class="header__hero-text body-sm-r margin-bottom-l">
+            Buy and sell cryptocurrencies, trusted by 10M wallets with over $30
+            billion in transactions.
+          </p>
+          <a href="#" class="btn btn--big body-st-m">Try for FREE &rarr;</a>
+        </div>
+        <div class="header__img-box">
+          <img src="img/Illustration.svg" class="header__img" alt="" />
+        </div>
+      </div>
+    </header>
+
+    <section class="section section-about section--hidden">
+      <div class="about">
+        <div class="about__numbers flex">
+          <div class="about__numbers-details flex">
+            <div class="about__icon">
+              <i class="fa-solid fa-chart-simple"></i>
+            </div>
+            <p class="about__text body-sm-r">
+              <span class="about__text-numbers heading-secondary">$30B</span
+              >Digital Currency Exchanged
+            </p>
+          </div>
+          <div class="about__numbers-details flex">
+            <div class="about__icon"><i class="fa-solid fa-user"></i></div>
+            <p class="about__text body-sm-r">
+              <span class="about__text-numbers heading-secondary">10M+</span
+              >Trusted Wallets Investor
+            </p>
+          </div>
+          <div class="about__numbers-details flex">
+            <div class="about__icon">
+              <i class="fa-solid fa-earth-africa"></i>
+            </div>
+            <p class="about__text body-sm-r">
+              <span class="about__text-numbers heading-secondary">195</span
+              >Countries Supported Globally
+            </p>
+          </div>
+        </div>
+        <div class="about__content flex">
+          <div class="about__content-text">
+            <h1 class="heading-secondary margin-bottom-m">
+              Why you should choose CRAPPO
+            </h1>
+            <h4 class="body-sm-r margin-bottom-l">
+              Experience the next generation cryptocurrency platform. No
+              financial borders, extra fees, and fake reviews.
+            </h4>
+
+            <a href="#" class="btn body-st-m">Learn More</a>
+          </div>
+          <div class="about__content-imgbox">
+            <img
+              src="img/Illustrations.svg"
+              alt=""
+              class="about__content-img"
+            />
+          </div>
+        </div>
+        <div class="about__info">
+          <h2 class="heading-secondary margin-bottom-m">
+            Check How Much You Can Earn
+          </h2>
+          <p class="body-sm-r">
+            Let’s check your hash rate to see how much you will earn today,
+            Exercitation veniam consequat sunt nostrud amet.
+          </p>
+        </div>
+        <div class="about__rate-box">
+          <div class="ratebox1">
+            <input
+              type="text"
+              class="hashrate"
+              id="hashrate"
+              name="hashrate"
+              placeholder="Enter your hash rate"
+            />
+            <select name="hashrate" class="hashrate" id="hashrate">
+              <option value="TH/s">TH/s</option>
+              <option value="KH/s">KH/s</option>
+              <option value="GH/s">GH/s</option>
+              <option value="MH/s">MH/s</option>
+            </select>
+            <a href="#" class="btn body-st-m">Calculate</a>
+          </div>
+          <div class="ratebox2">
+            <p class="title-sm-m margin-bottom-m">ESTIMATED 24 HOUR REVENUE:</p>
+            <p class="heading-tertiary margin-bottom-s">
+              0.055 130 59 ETH <span>($1275)</span>
+            </p>
+            <p class="body-sm-r" id="last">
+              Revenue will change based on mining difficulty and Ethereum price.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-cards section--hidden">
+      <h2 class="cards__title heading-secondary">
+        Trade securely and market the high growth cryptocurrencies.
+      </h2>
+      <div class="card">
+        <div class="cards cards__btc">
+          <div class="cards__side cards__side--front">
+            <img src="img/Iconbitcoin.svg" alt="" class="cards__icon" />
+            <h3 class="heading-tertiary">
+              Bitcoin<span class="body-st-m">BTC</span>
+            </h3>
+            <p class="body-sm-r">
+              Digital currency in which a record of transactions is maintained. lorem ipsum.
+            </p>
+            <a href="#" class="body-sm-m"
+              ><span></span><i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="cards__side cards__side--back">
+            <a href="#" class="btn body-st-m">Start Mining</a>
+          </div>
+        </div>
+        <div class="cards cards__eth">
+          <div class="cards__side cards__side--front">
+            <img src="img/Iconeth.svg" alt="" class="cards__icon" />
+            <h3 class="heading-tertiary">
+              Ethereum<span class="body-st-m">ETH</span>
+            </h3>
+            <p class="body-sm-r">
+              Blockchain technology to create and run decentralized digital
+              applications.
+            </p>
+            <a href="#" class="body-sm-m"
+              ><span></span><i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="cards__side cards__side--back">
+            <a href="#" class="btn body-st-m">Start Mining</a>
+          </div>
+        </div>
+        <div class="cards cards__ltc">
+          <div class="cards__side cards__side--front">
+            <img src="img/Iconltc.svg" alt="" class="cards__icon" />
+            <h3 class="heading-tertiary">
+              Litecoin<span class="body-st-m">LTC</span>
+            </h3>
+            <p class="body-sm-r">
+              Cryptocurrency that enables instant payments to anyone in the
+              world.
+            </p>
+            <a href="#" class="body-sm-m"
+              ><span></span><i class="fa-solid fa-chevron-right"></i
+            ></a>
+          </div>
+          <div class="cards__side cards__side--back">
+            <a href="#" class="btn body-st-m">Start Mining</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section section-features section--hidden">
+      <h2 class="heading-secondary margin-bottom-xl">
+        Market sentiments, portfolio, and run the infrastructure of your choice
+      </h2>
+      <div class="features features__smart flex">
+        <div class="features__textcontent">
+          <h3 class="heading-tertiary margin-bottom-m">Invest Smart</h3>
+          <p class="body-sm-r margin-bottom-m">
+            View all mining related information in realtime, at any point at any
+            location and decide which polls you want to mine in.
+          </p>
+          <a href="" class="btn body-sm-m">Learn More</a>
+        </div>
+        <div class="features__imgbox">
+          <img src="img/Chart.svg" alt="" class="features__img" />
+        </div>
+      </div>
+      <div class="features features__stats flex">
+        <div class="features__textcontent">
+          <h3 class="heading-tertiary margin-bottom-m">Detailed Statistics</h3>
+          <p class="body-sm-r margin-bottom-m">
+            Get full statistic information about the behaviour of buyers and
+            sellers will help you to make the decision.
+          </p>
+          <a href="" class="btn body-sm-m">Learn More</a>
+        </div>
+        <div class="features__imgbox">
+          <img src="img/Statistic.svg" alt="" class="features__img" />
+        </div>
+      </div>
+      <div class="features features__profit flex">
+        <div class="features__textcontent">
+          <h3 class="heading-tertiary margin-bottom-m">Grow Profit</h3>
+          <p class="body-sm-r margin-bottom-m">
+            Use advanced analytical tools. Clear TradingView charts let you
+            track current and historical profit investments.
+          </p>
+          <a href="" class="btn body-sm-m">Learn More</a>
+        </div>
+        <div class="features__imgbox">
+          <img src="img/Table.svg" alt="" class="features__img" />
+        </div>
+      </div>
+    </section>
+    <section class="section section-mining section--hidden">
+      <div class="mining flex">
+        <div class="mining__text-content">
+          <h3 class="heading-tertiary margin-bottom-m">Start mining now</h3>
+          <p class="body-sm-r">
+            Join now with CRAPPO to get the latest news and start mining now
+          </p>
+        </div>
+        <input
+          type="text"
+          placeholder="Enter your email"
+          class="mining__input"
+        />
+        <a href="#" class="btn body-sm-m">Subscribe</a>
+      </div>
+    </section>
+
+    <footer class="section section--hidden">
+      <div class="footer flex">
+        <div class="footer__logobox">
+          <img src="img/Logo.svg" alt="" class="footer__logo" />
+        </div>
+        <div class="footer__links">
+          <p class="body-l-m margin-bottom-m">Quick Links</p>
+          <ul class="footer__links-list">
+            <li class="footer__links-item">
+              <a href="#" class="footer__links-link">Home</a>
+            </li>
+            <li class="footer__links-item">
+              <a href="#" class="footer__links-link">Products</a>
+            </li>
+            <li class="footer__links-item">
+              <a href="#" class="footer__links-link">About</a>
+            </li>
+            <li class="footer__links-item">
+              <a href="#" class="footer__links-link">Feaatures</a>
+            </li>
+            <li class="footer__links-item">
+              <a href="#" class="footer__links-link">Contact</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__resources">
+          <p class="body-l-m margin-bottom-m">Reaources</p>
+          <ul class="footer__resources-list">
+            <li class="footer__resources-item">
+              <a href="#" class="footer__resources-link">Download Whitepaper</a>
+            </li>
+            <li class="footer__resources-item">
+              <a href="#" class="footer__resources-link">Smart Token</a>
+            </li>
+            <li class="footer__resources-item">
+              <a href="#" class="footer__resources-link">Blockchain Explorer</a>
+            </li>
+            <li class="footer__resources-item">
+              <a href="#" class="footer__resources-link">Crypto API</a>
+            </li>
+            <li class="footer__resources-item">
+              <a href="#" class="footer__resources-link">Interest</a>
+            </li>
+          </ul>
+        </div>
+        <div class="footer__payment-methods">
+          <p class="title-l-m">We accept following payment systems</p>
+          <div class="footer__pm-imgbox flex">
+            <img src="img/bx_bxl-visa.svg" alt="" class="footer__pm-img" />
+            <img src="img/logos_mastercard.svg" alt="" class="footer__pm-img" />
+            <img src="img/logos_bitcoin.svg" alt="" class="footer__pm-img" />
+          </div>
+        </div>
+      </div>
+      <div class="footer__footnote flex">
+        <p class="body-sm-r">©2021 CRAPPO. All rights reserved</p>
+        <div>
+          <i class="fa-brands fa-facebook"></i>
+          <i class="fa-brands fa-instagram"></i>
+          <i class="fa-brands fa-youtube"></i>
+          <i class="fa-brands fa-twitter"></i>
+          <i class="fa-brands fa-linkedin"></i>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
